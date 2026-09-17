@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- 22nd-Century Cybernetic Pointer Cursor -->
+  <path d="M4 2 L22 13 L14 15 L18 24 L14 26 L10 17 L4 21 Z" fill="#0A111F" stroke="#38BDF8" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- Golden Bell Core Dot -->
+  <circle cx="10" cy="9" r="2.2" fill="#F59E0B" stroke="#B45309" stroke-width="0.8"/>
+  <!-- Hologram Reticle Lines -->
+  <line x1="20" y1="2" x2="26" y2="2" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+  <line x1="26" y1="2" x2="26" y2="8" stroke="#38BDF8" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+</svg>

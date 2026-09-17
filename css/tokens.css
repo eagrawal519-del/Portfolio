@@ -1,0 +1,472 @@
+/* ==========================================================================
+   22ND-CENTURY DORAEMON CYBERNETIC DESIGN SYSTEM — DESIGN TOKENS
+   ========================================================================== */
+
+:root {
+  /* Color Palette — Doraemon Robotic Cybernetic Palette */
+  --bg-cosmos: #060B14;          /* Deepest cosmic background */
+  --bg-subspace: #0A111F;        /* Main background */
+  --bg-surface: #0F1A2E;         /* Panel / gadget surface */
+  --bg-surface-elevated: #16243F;/* Hovered / elevated cards */
+  --bg-surface-glass: rgba(15, 26, 46, 0.82); /* Frosted HUD elements */
+  --bg-surface-trans: rgba(22, 36, 63, 0.5);
+
+  /* Robotic Primary Blues */
+  --blue-primary: #0284C7;       /* Iconic Doraemon Blue */
+  --blue-bright: #38BDF8;        /* Hologram / HUD Cyan Blue */
+  --blue-glow: rgba(56, 189, 248, 0.22);
+  --blue-subtle: rgba(2, 132, 199, 0.12);
+  --blue-border: rgba(56, 189, 248, 0.28);
+  --blue-dark: #0369A1;
+
+  /* Signature Doraemon Accent Colors */
+  --bell-gold: #F59E0B;          /* Doraemon Bell Gold */
+  --bell-gold-bright: #FBBF24;
+  --bell-gold-glow: rgba(245, 158, 11, 0.25);
+  --bell-gold-subtle: rgba(245, 158, 11, 0.1);
+
+  --collar-red: #EF4444;         /* Doraemon Collar Red */
+  --collar-red-hover: #DC2626;
+  --collar-red-glow: rgba(239, 68, 68, 0.3);
+  --collar-red-subtle: rgba(239, 68, 68, 0.12);
+
+  --door-pink: #F43F5E;          /* Dokodemo Door Magenta-Pink */
+  --door-pink-glow: rgba(244, 63, 94, 0.3);
+
+  /* Functional Status Indicators */
+  --status-online: #10B981;      /* System ready / telemetry OK */
+  --status-online-glow: rgba(16, 185, 129, 0.35);
+
+  /* Neutral Typography */
+  --text-pure: #FFFFFF;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+
+  /* Seams & Mechanical Borders */
+  --border-subtle: rgba(148, 163, 184, 0.15);
+  --border-medium: rgba(148, 163, 184, 0.26);
+  --border-active: rgba(56, 189, 248, 0.45);
+  --border-gold: rgba(245, 158, 11, 0.4);
+
+  /* Typography Stacks */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.75rem, 1vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 1.2vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 1.4vw, 1rem);
+  --text-lg: clamp(1.0625rem, 1.6vw, 1.1875rem);
+  --text-xl: clamp(1.25rem, 2vw, 1.375rem);
+  --text-2xl: clamp(1.5rem, 2.5vw, 1.75rem);
+  --text-3xl: clamp(1.875rem, 3.2vw, 2.25rem);
+  --text-4xl: clamp(2.25rem, 4vw, 2.875rem);
+  --text-5xl: clamp(2.75rem, 5.5vw, 4rem);
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  /* Corner Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+
+  /* Mechanical Shadows & Glows */
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--border-subtle);
+  --shadow-hover: 0 18px 44px -8px rgba(2, 132, 199, 0.25), 0 0 0 1px var(--border-active);
+  --shadow-portal: 0 0 45px -5px var(--door-pink-glow), 0 16px 40px -8px rgba(0, 0, 0, 0.7);
+
+  /* Spring Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   CSS RESET & BASE DEFAULTS
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  text-size-adjust: 100%;
+  cursor: url('../assets/icons/cursor-normal.svg') 4 2, auto;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  background-color: var(--bg-cosmos);
+  background-image: 
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(2, 132, 199, 0.22), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 100% 30%, rgba(244, 63, 94, 0.12), transparent 65%),
+    radial-gradient(ellipse 60% 40% at 0% 70%, rgba(56, 189, 248, 0.14), transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(245, 158, 11, 0.08), transparent 50%),
+    linear-gradient(180deg, var(--bg-cosmos) 0%, #081122 50%, var(--bg-cosmos) 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url('../assets/icons/cursor-normal.svg') 4 2, auto;
+}
+
+/* Interactive 22nd-Century Sub-Space Canvas */
+#subspaceCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* High-tech Blueprint Grid Pattern (Subtle Background) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Interactive Elements Custom Cursor */
+a, button, [role="button"], input, select, textarea, .btn, .door-card, .gadget-drawer, .memory-card, .contact-link-tile, .site-nav__link, .hud-satellite, .contact-copy-btn, .site-nav__resume-btn {
+  cursor: url('../assets/icons/cursor-pointer.svg') 16 10, pointer;
+}
+
+/* Custom Cyber Cursor Follower Rings */
+.cyber-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue-bright);
+  box-shadow: 0 0 12px var(--blue-bright);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.04s ease-out, background 0.2s, width 0.2s, height 0.2s;
+}
+
+.cyber-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s, transform 0.12s ease-out;
+}
+
+.cyber-cursor-ring.is-hovering {
+  width: 52px;
+  height: 52px;
+  border-color: var(--bell-gold);
+  border-style: dashed;
+  box-shadow: 0 0 22px var(--bell-gold-glow);
+}
+
+.cyber-cursor-click-spark {
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-bright);
+  pointer-events: none;
+  z-index: 99997;
+  transform: translate(-50%, -50%) scale(1);
+  animation: cursor-spark-anim 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cursor-spark-anim {
+  to {
+    transform: translate(-50%, -50%) scale(3.2);
+    opacity: 0;
+  }
+}
+
+@media (pointer: coarse), (hover: none) {
+  .cyber-cursor-dot,
+  .cyber-cursor-ring,
+  .cyber-cursor-click-spark {
+    display: none !important;
+  }
+}
+
+/* Accessible Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--blue-bright);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Accessible Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  background: var(--blue-primary);
+  color: var(--text-pure);
+  padding: var(--space-3) var(--space-6);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 1.5rem;
+}
+
+/* Container Standard */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Rhythm */
+.section {
+  padding-block: clamp(4rem, 8vw, 7.5rem);
+  position: relative;
+}
+
+.section-head {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  background: var(--blue-subtle);
+  border: 1px solid var(--blue-border);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.section-kicker svg {
+  width: 14px;
+  height: 14px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-pure);
+  letter-spacing: -0.02em;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--blue-bright);
+  position: relative;
+}
+
+.section-lede {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-top: var(--space-3);
+  line-height: 1.6;
+}
+
+/* Global Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.875rem 1.6rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: var(--bg-surface-elevated);
+  border-color: var(--blue-border);
+  color: var(--text-pure);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 100%);
+  border-color: var(--blue-bright);
+  color: var(--text-pure);
+  box-shadow: 0 4px 18px var(--blue-glow);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--blue-bright) 0%, var(--blue-primary) 100%);
+  border-color: var(--text-pure);
+  box-shadow: 0 6px 24px var(--blue-glow);
+}
+
+.btn--danger {
+  background: linear-gradient(135deg, var(--collar-red) 0%, #B91C1C 100%);
+  border-color: #F87171;
+  color: var(--text-pure);
+  box-shadow: 0 4px 18px var(--collar-red-glow);
+}
+
+.btn--danger:hover {
+  background: linear-gradient(135deg, #F87171 0%, var(--collar-red) 100%);
+  border-color: var(--text-pure);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Badges & Tags */
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-xs);
+  background: rgba(14, 23, 42, 0.7);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.tech-tag--highlight {
+  background: var(--blue-subtle);
+  border-color: var(--blue-border);
+  color: var(--blue-bright);
+}
+
+/* Mechanical Corner Bracket Accents */
+.corner-brackets {
+  position: relative;
+}
+
+.corner-brackets::before,
+.corner-brackets::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  border-color: var(--blue-bright);
+  border-style: solid;
+  opacity: 0.6;
+}
+
+.corner-brackets::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-brackets::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

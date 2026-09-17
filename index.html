@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekta Agrawal — Frontend Developer | 22nd-Century Cybernetic Portfolio</title>
+  
+  <!-- SEO & Open Graph Metadata -->
+  <meta name="description" content="Personal developer portfolio of Ekta Agrawal — Frontend Developer and Computer Science undergraduate with hands-on experience across enterprise IT support, SEO analytics, and UI/UX prototyping.">
+  <meta name="author" content="Ekta Agrawal">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ekta Agrawal — Frontend Developer | 22nd-Century Portfolio">
+  <meta property="og:description" content="Doraemon-inspired cybernetic personal developer portfolio. Bridging clean frontend code (HTML, CSS, JavaScript) and precision UI/UX design (Figma, Adobe XD).">
+  <meta property="og:image" content="assets/icons/doraemon-emblem.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ekta Agrawal — Frontend Developer">
+  <meta name="twitter:description" content="Frontend Developer & Computer Science Undergraduate — Raigarh (C.G.)">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ekta Agrawal",
+    "jobTitle": "Frontend Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "OP Jindal University"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Raigarh",
+      "addressRegion": "Chhattisgarh",
+      "addressCountry": "India"
+    },
+    "email": "agrawalekta498@gmail.com",
+    "telephone": "+91-7722822202",
+    "url": "https://github.com/eagrawal519-del",
+    "sameAs": [
+      "https://linkedin.com/in/ekta-agrawal-834b94314/",
+      "https://github.com/eagrawal519-del"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#main">Skip to main console</a>
+
+  <!-- Interactive 22nd-Century Sub-Space Background Canvas -->
+  <canvas id="subspaceCanvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       1. TAKE-COPTER FLIGHT CONTROL NAV BAR
+       ======================================================================== -->
+  <header class="site-nav" id="siteNav">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="#top" aria-label="Ekta Agrawal — Return to Command Deck">
+        <img src="assets/icons/doraemon-emblem.svg" alt="" class="site-nav__emblem" width="32" height="32" aria-hidden="true">
+        <div class="site-nav__brand-title">
+          <span class="site-nav__brand-name">Ekta Agrawal</span>
+          <span class="site-nav__brand-tag">FRONTEND_DEV // 22ND_GEN</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="site-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle flight controls">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Navigation Jump Points -->
+      <nav id="navMenu" class="site-nav__menu" aria-label="Primary Navigation">
+        <a class="site-nav__link" href="#about">About</a>
+        <a class="site-nav__link" href="#skills">Gadget Drawer</a>
+        <a class="site-nav__link" href="#experience">Time Machine</a>
+        <a class="site-nav__link" href="#projects">Anywhere Door</a>
+        <a class="site-nav__link" href="#archive">Archive</a>
+        <a class="site-nav__link" href="#contact">Warp</a>
+        <a class="site-nav__resume-btn" href="assets/Ekta_Agrawal_Frontend_Developer_Resume.pdf" download="Ekta_Agrawal_Frontend_Developer_Resume.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Blueprint (PDF)
+        </a>
+        <button class="site-nav__bgm-btn" id="bgmToggle" aria-label="Toggle 22nd-century Doraemon theme music">
+          <div class="bgm-eq" aria-hidden="true">
+            <span class="bgm-eq-bar"></span>
+            <span class="bgm-eq-bar"></span>
+            <span class="bgm-eq-bar"></span>
+            <span class="bgm-eq-bar"></span>
+          </div>
+          <span id="bgmLabel">BGM // DORAEMON</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONSOLE
+       ======================================================================== -->
+  <main id="main">
+
+    <!-- ======================================================================
+         HERO: 22ND-CENTURY COMMAND DECK
+         ====================================================================== -->
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        
+        <!-- Left: Mission Control Text -->
+        <div class="hero__text reveal-on-scroll">
+          <div class="hero__telemetry-pill">
+            <span class="hero__status-led" aria-hidden="true"></span>
+            <span>SYSTEM ONLINE // RAIGARH (C.G.) // COORDS: 21.8974° N, 83.3950° E</span>
+          </div>
+
+          <h1 class="hero__title">
+            Engineering interfaces with <span class="hero__title-accent">22nd-century precision</span> and timeless craft.
+          </h1>
+
+          <p class="hero__subtitle">
+            Frontend Developer &amp; Computer Science Undergraduate
+          </p>
+
+          <p class="hero__lede">
+            Comfortable moving between code — <strong>HTML, CSS, JavaScript, Python</strong> — and design tools like <strong>Figma and Adobe XD</strong>, with a proven track record of mastering complex systems across two internships and an autonomous machine learning project. Seeking an entry-level Frontend Developer role to build resilient production interfaces end-to-end.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">
+              Enter 4D Pocket (Explore Work)
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a class="btn" href="assets/Ekta_Agrawal_Frontend_Developer_Resume.pdf" download="Ekta_Agrawal_Frontend_Developer_Resume.pdf">
+              Download Blueprint (PDF)
+            </a>
+            <a class="btn" href="assets/Ekta_Agrawal_Frontend_Developer_Resume.docx" download="Ekta_Agrawal_Frontend_Developer_Resume.docx">
+              DOCX
+            </a>
+          </div>
+
+          <!-- Telemetry Data Strip -->
+          <div class="hero__metrics">
+            <div class="metric-item">
+              <span class="metric-value">OP Jindal</span>
+              <span class="metric-label">B.Tech CSE // 7.5 CGPA</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">2 Internships</span>
+              <span class="metric-label">Adani Power &amp; Digital Veda</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">4 Systems</span>
+              <span class="metric-label">ERP, ML, SDG AI &amp; Network</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 22nd-Century Cybernetic HUD Console -->
+        <div class="hero__hud reveal-on-scroll" aria-hidden="true">
+          <div class="hero__hud-panel">
+            <!-- Rotating Gyro Rings -->
+            <div class="hud-gyro-ring hud-gyro-ring--outer"></div>
+            <div class="hud-gyro-ring hud-gyro-ring--mid"></div>
+
+            <!-- Orbiting Gadget Satellites -->
+            <div class="hud-satellite hud-satellite--take-copter" title="Take-Copter Propulsion">
+              <img src="assets/icons/take-copter.svg" alt="" width="24" height="24">
+            </div>
+            <div class="hud-satellite hud-satellite--door" title="Anywhere Door Gateway">
+              <img src="assets/icons/anywhere-door.svg" alt="" width="20" height="26">
+            </div>
+            <div class="hud-satellite hud-satellite--chrono" title="Time Machine Chronometer">
+              <img src="assets/icons/time-machine.svg" alt="" width="24" height="24">
+            </div>
+            <div class="hud-satellite hud-satellite--bell" title="Doraemon Resonator Bell">
+              <img src="assets/favicon.svg" alt="" width="22" height="22">
+            </div>
+
+            <!-- Central HUD Core -->
+            <div class="hud-centerpiece">
+              <div class="hud-emblem-wrapper">
+                <img src="assets/icons/doraemon-emblem.svg" alt="" width="130" height="130">
+              </div>
+              <div class="hud-telemetry-readout">
+                [4D_POCKET // READY_TO_DEPLOY]
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         01. ABOUT: 4D SUB-SPACE COMPARTMENT
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <p class="section-kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+            01 // 4D Sub-Space Compartment
+          </p>
+          <h2 class="section-title">
+            Under the hood: <em>A workshop of code &amp; design</em>
+          </h2>
+          <p class="section-lede">
+            Just like Doraemon's four-dimensional pocket holds infinite tools, my developer mindset connects multi-disciplinary capabilities — from industrial server racks to pixel-perfect component architecture.
+          </p>
+        </div>
+
+        <div class="about-card reveal-on-scroll">
+          <div class="about-grid">
+            
+            <div class="about-text">
+              <p>
+                I am a <strong>Computer Science undergraduate at OP Jindal University</strong> (graduating 2027) with direct, hands-on experience spanning enterprise IT infrastructure, technical SEO analytics, and end-to-end UI/UX prototyping.
+              </p>
+              <p>
+                My strength lies in bridging both halves of the modern web: translating abstract design systems in <strong>Figma and Adobe XD</strong> into clean, accessible, semantic code with <strong>HTML, CSS, and JavaScript</strong>.
+              </p>
+              <p>
+                This versatility was forged on the ground, not in theory: administering plant-wide network infrastructure at an <strong>Adani Power</strong> industrial facility, auditing search performance metrics for <strong>Digital Veda</strong>, and architecting an AI-driven predictive health diagnostic model. Each experience honed my ability to rapidly master unfamiliar tech stacks and deliver reliable solutions.
+              </p>
+            </div>
+
+            <!-- 4D Pocket Schematic Box -->
+            <div class="about-schematic">
+              <img src="assets/icons/pocket-4d.svg" alt="4D Pocket Dimensional Schematic" class="about-schematic-svg" width="180" height="130">
+              <h3 style="font-family: var(--font-display); font-size: var(--text-base); color: var(--text-pure); margin-bottom: 0.25rem;">
+                Sub-Space Telemetry Log
+              </h3>
+              <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-3);">
+                Core parameters &amp; engineering foundation
+              </p>
+
+              <div class="about-spec-list">
+                <div class="about-spec-item">
+                  <span class="about-spec-label">ACADEMIC HOME</span>
+                  <span class="about-spec-val">OP Jindal University</span>
+                </div>
+                <div class="about-spec-item">
+                  <span class="about-spec-label">DEGREE &amp; CGPA</span>
+                  <span class="about-spec-val">B.Tech CSE // 7.5 / 10.0</span>
+                </div>
+                <div class="about-spec-item">
+                  <span class="about-spec-label">OPERATIONAL BASE</span>
+                  <span class="about-spec-val">Raigarh, Chhattisgarh</span>
+                </div>
+                <div class="about-spec-item">
+                  <span class="about-spec-label">CORE DIRECTION</span>
+                  <span class="about-spec-val">Production Frontend Dev</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         02. SKILLS: DORAEMON'S GADGET DRAWER
+         ====================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <p class="section-kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+            02 // Himitsu Dougu Inventory
+          </p>
+          <h2 class="section-title">
+            The Gadget Drawer: <em>Instruments of the Trade</em>
+          </h2>
+          <p class="section-lede">
+            Every tool in the inventory has a dedicated purpose. Categorized by functional capability rather than arbitrary tags.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Drawer 1: Frontend -->
+          <article class="gadget-drawer reveal-on-scroll">
+            <div class="gadget-drawer__header">
+              <div class="gadget-drawer__title-wrap">
+                <div class="gadget-drawer__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <h3 class="gadget-drawer__title">Frontend Core</h3>
+              </div>
+              <span class="gadget-drawer__index">D-01</span>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-4);">
+              Building resilient, accessible, and fast client-side interfaces.
+            </p>
+            <div class="gadget-drawer__list">
+              <span class="gadget-chip">HTML5 Semantic Structure</span>
+              <span class="gadget-chip">CSS3 / Flexbox &amp; Grid</span>
+              <span class="gadget-chip">JavaScript (ES6+)</span>
+              <span class="gadget-chip">Responsive Web Design</span>
+              <span class="gadget-chip">DOM &amp; Event Architecture</span>
+              <span class="gadget-chip">Component-Driven UI</span>
+            </div>
+          </article>
+
+          <!-- Drawer 2: Languages -->
+          <article class="gadget-drawer reveal-on-scroll">
+            <div class="gadget-drawer__header">
+              <div class="gadget-drawer__title-wrap">
+                <div class="gadget-drawer__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                </div>
+                <h3 class="gadget-drawer__title">Programming Languages</h3>
+              </div>
+              <span class="gadget-drawer__index">D-02</span>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-4);">
+              Foundational languages for systems, logic, and data processing.
+            </p>
+            <div class="gadget-drawer__list">
+              <span class="gadget-chip">C</span>
+              <span class="gadget-chip">C++</span>
+              <span class="gadget-chip">Python</span>
+              <span class="gadget-chip">Java</span>
+              <span class="gadget-chip">SQL</span>
+            </div>
+          </article>
+
+          <!-- Drawer 3: UI/UX & Design -->
+          <article class="gadget-drawer reveal-on-scroll">
+            <div class="gadget-drawer__header">
+              <div class="gadget-drawer__title-wrap">
+                <div class="gadget-drawer__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                    <path d="M2 2l7.586 7.586"/>
+                    <circle cx="11" cy="11" r="2"/>
+                  </svg>
+                </div>
+                <h3 class="gadget-drawer__title">UI/UX &amp; Prototyping</h3>
+              </div>
+              <span class="gadget-drawer__index">D-03</span>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-4);">
+              Translating product requirements into interactive design prototypes.
+            </p>
+            <div class="gadget-drawer__list">
+              <span class="gadget-chip">Figma (Wireframing)</span>
+              <span class="gadget-chip">Interactive Prototyping</span>
+              <span class="gadget-chip">Visual Design Systems</span>
+              <span class="gadget-chip">Adobe XD</span>
+              <span class="gadget-chip">Canva</span>
+            </div>
+          </article>
+
+          <!-- Drawer 4: Systems & IT -->
+          <article class="gadget-drawer reveal-on-scroll">
+            <div class="gadget-drawer__header">
+              <div class="gadget-drawer__title-wrap">
+                <div class="gadget-drawer__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                    <line x1="6" y1="6" x2="6.01" y2="6"/>
+                    <line x1="6" y1="18" x2="6.01" y2="18"/>
+                  </svg>
+                </div>
+                <h3 class="gadget-drawer__title">Systems &amp; Operations</h3>
+              </div>
+              <span class="gadget-drawer__index">D-04</span>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-4);">
+              Real-world experience managing industrial enterprise infrastructure.
+            </p>
+            <div class="gadget-drawer__list">
+              <span class="gadget-chip">LAN/WAN Infrastructure</span>
+              <span class="gadget-chip">Network Monitoring Tools</span>
+              <span class="gadget-chip">Tier-1 IT Support &amp; Ticketing</span>
+              <span class="gadget-chip">Server Rack Operations</span>
+              <span class="gadget-chip">Workstation Deployment</span>
+            </div>
+          </article>
+
+          <!-- Drawer 5: Productivity & Collaboration -->
+          <article class="gadget-drawer reveal-on-scroll">
+            <div class="gadget-drawer__header">
+              <div class="gadget-drawer__title-wrap">
+                <div class="gadget-drawer__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                    <polyline points="2 17 12 22 22 17"/>
+                    <polyline points="2 12 12 17 22 12"/>
+                  </svg>
+                </div>
+                <h3 class="gadget-drawer__title">Productivity &amp; Workflow</h3>
+              </div>
+              <span class="gadget-drawer__index">D-05</span>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-4);">
+              Enterprise collaboration, documentation, and version control.
+            </p>
+            <div class="gadget-drawer__list">
+              <span class="gadget-chip">Git &amp; GitHub</span>
+              <span class="gadget-chip">Microsoft Word</span>
+              <span class="gadget-chip">Microsoft Excel</span>
+              <span class="gadget-chip">Microsoft PowerPoint</span>
+              <span class="gadget-chip">Microsoft Outlook</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         03. EXPERIENCE & EDUCATION: TIME MACHINE CHRONO-LOG
+         ====================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <p class="section-kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+            03 // Temporal Chrono-Log
+          </p>
+          <h2 class="section-title">
+            Time Machine: <em>Experience &amp; Academic Orbit</em>
+          </h2>
+          <p class="section-lede">
+            Charting verified industrial internships alongside core computer science education.
+          </p>
+        </div>
+
+        <div class="chrono-container">
+          
+          <!-- Column 1: Industry Internships -->
+          <div class="chrono-column reveal-on-scroll">
+            <div class="chrono-column-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <h3 class="chrono-column-title">Industrial Internships</h3>
+            </div>
+
+            <div class="chrono-track">
+              
+              <!-- Adani Power -->
+              <div class="chrono-node">
+                <div class="chrono-marker" aria-hidden="true"></div>
+                <article class="chrono-card">
+                  <div class="chrono-header">
+                    <h4 class="chrono-role">IT Department Intern</h4>
+                    <span class="chrono-badge">8 Weeks Duration</span>
+                  </div>
+                  <p class="chrono-org">Adani Power, Raigarh</p>
+                  <ul class="chrono-bullets">
+                    <li>Administered plant-wide LAN/WAN infrastructure, network switches, and peripheral hardware connectivity, supporting uninterrupted operations across plant units and service buildings.</li>
+                    <li>Deployed and configured desktop workstations, industrial printers, and biometric/access-control systems, standardizing setup across multiple plant locations.</li>
+                    <li>Resolved Tier-1 IT support tickets covering ERP/SAP login failures, domain network access, and system-level troubleshooting for plant staff.</li>
+                    <li>Gained direct exposure to server rack maintenance and industrial IT SOPs, building foundational enterprise network operations knowledge.</li>
+                    <li><strong>Key Milestone:</strong> Built Python-based automated network ping monitoring &amp; SMTP email alert system to notify administrators of downtime and recovery.</li>
+                  </ul>
+                </article>
+              </div>
+
+              <!-- Digital Veda -->
+              <div class="chrono-node">
+                <div class="chrono-marker" aria-hidden="true"></div>
+                <article class="chrono-card">
+                  <div class="chrono-header">
+                    <h4 class="chrono-role">SEO Intern</h4>
+                    <span class="chrono-badge">1.5 Months Duration</span>
+                  </div>
+                  <p class="chrono-org">Digital Veda</p>
+                  <ul class="chrono-bullets">
+                    <li>Audited website performance and technical on-page SEO, running keyword tracking to surface optimization opportunities.</li>
+                    <li>Analyzed traffic patterns via Google Analytics and Search Console, compiling performance reports used to guide content decisions.</li>
+                    <li>Streamlined data entry, content optimization, and online reporting workflows in collaboration with the digital team.</li>
+                  </ul>
+                </article>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 2: Academic Timeline -->
+          <div class="chrono-column reveal-on-scroll">
+            <div class="chrono-column-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              <h3 class="chrono-column-title">Academic Orbit</h3>
+            </div>
+
+            <div class="chrono-track">
+              
+              <!-- OP Jindal University -->
+              <div class="chrono-node">
+                <div class="chrono-marker" aria-hidden="true"></div>
+                <article class="chrono-card">
+                  <div class="chrono-header">
+                    <h4 class="chrono-role">OP Jindal University</h4>
+                    <span class="chrono-badge">Aug 2023 – 2027 (Expected)</span>
+                  </div>
+                  <p class="chrono-org">B.Tech, Computer Science &amp; Engineering</p>
+                  <p style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-pure); margin-bottom: var(--space-2); font-weight: 600;">
+                    CGPA: 7.5 / 10.0
+                  </p>
+                  <p style="font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.55;">
+                    <strong>Core Coursework:</strong> Computer Architecture, Comparison of Learning Algorithms, Computational Theory.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Sarvodaya Public School -->
+              <div class="chrono-node">
+                <div class="chrono-marker" aria-hidden="true"></div>
+                <article class="chrono-card">
+                  <div class="chrono-header">
+                    <h4 class="chrono-role">Sarvodaya Public School</h4>
+                    <span class="chrono-badge">Secondary Education</span>
+                  </div>
+                  <p class="chrono-org">Schooling Board Examinations</p>
+                  <ul class="chrono-bullets">
+                    <li><strong>Class 12th:</strong> 68% (Completed April 2023)</li>
+                    <li><strong>Class 10th:</strong> 68% (Completed April 2021)</li>
+                  </ul>
+                </article>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         04. PROJECTS: ANYWHERE DOOR PROJECT VAULT
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <p class="section-kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+            04 // Dokodemo Door Vault
+          </p>
+          <h2 class="section-title">
+            Anywhere Door: <em>Deployed Systems &amp; Projects</em>
+          </h2>
+          <p class="section-lede">
+            Step through the Anywhere Door into real engineering artifacts — verified interfaces, machine learning pipelines, and automation software.
+          </p>
+        </div>
+
+        <div class="projects-vault">
+          
+          <!-- Project 1: AI-Powered Cloud ERP System -->
+          <article class="door-card reveal-on-scroll">
+            <div class="door-card__portal-header">
+              <span class="door-card__coord">DIM_REF // 01</span>
+              <img src="assets/icons/anywhere-door.svg" alt="" class="door-card__door-icon" width="72" height="96" aria-hidden="true">
+            </div>
+            <div class="door-card__body">
+              <h3 class="door-card__title">AI-Powered Cloud ERP System</h3>
+              <p class="door-card__desc">
+                Developed responsive frontend interfaces for a cloud-based ERP system, building modular and reusable UI components across core modules including live analytics dashboards, data entry forms, and reporting views. Integrated predictive AI insights directly into the frontend presentation layer and optimized styling for cross-device consistency.
+              </p>
+              <div class="door-card__tech-stack">
+                <span class="tech-tag tech-tag--highlight">HTML5</span>
+                <span class="tech-tag tech-tag--highlight">CSS3</span>
+                <span class="tech-tag tech-tag--highlight">JavaScript</span>
+                <span class="tech-tag">React / Vite</span>
+                <span class="tech-tag">Tailwind CSS</span>
+              </div>
+              <div class="door-card__footer">
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">Enterprise Frontend</span>
+                <a class="door-card__link" href="https://github.com/eagrawal519-del/EKTA-AGRAWAL" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Heart Disease Prediction System -->
+          <article class="door-card reveal-on-scroll">
+            <div class="door-card__portal-header">
+              <span class="door-card__coord">DIM_REF // 02</span>
+              <img src="assets/icons/anywhere-door.svg" alt="" class="door-card__door-icon" width="72" height="96" aria-hidden="true">
+            </div>
+            <div class="door-card__body">
+              <h3 class="door-card__title">Heart Disease Prediction System</h3>
+              <p class="door-card__desc">
+                Built a predictive machine learning model to assess heart disease risk from patient clinical data. Enhanced diagnostic signal by integrating medical imaging (CT scans, MRIs) into the model pipeline and designed real-time monitoring ingest using wearable-device metrics (heart rate, blood pressure) to evaluate patient telemetry.
+              </p>
+              <div class="door-card__tech-stack">
+                <span class="tech-tag tech-tag--highlight">Python</span>
+                <span class="tech-tag tech-tag--highlight">Machine Learning</span>
+                <span class="tech-tag">Medical Imaging</span>
+                <span class="tech-tag">Sensor Telemetry</span>
+              </div>
+              <div class="door-card__footer">
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">Aug 2025 – Nov 2025</span>
+                <a class="door-card__link" href="https://github.com/eagrawal519-del" target="_blank" rel="noopener noreferrer">
+                  View Profile
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: MediCare AI (SDG 3) -->
+          <article class="door-card reveal-on-scroll">
+            <div class="door-card__portal-header">
+              <span class="door-card__coord">DIM_REF // 03</span>
+              <img src="assets/icons/anywhere-door.svg" alt="" class="door-card__door-icon" width="72" height="96" aria-hidden="true">
+            </div>
+            <div class="door-card__body">
+              <h3 class="door-card__title">MediCare AI (SDG 3 Tracker)</h3>
+              <p class="door-card__desc">
+                An AI-assisted medication adherence tracker engineered for UN Sustainable Development Goal 3 (Good Health and Well-being). Features interactive dose scheduling, local SQLite dose logging, generic drug autocomplete, and an AI advisory layer turning adherence logs into natural-language health insights.
+              </p>
+              <div class="door-card__tech-stack">
+                <span class="tech-tag tech-tag--highlight">HTML5 / CSS</span>
+                <span class="tech-tag tech-tag--highlight">JavaScript</span>
+                <span class="tech-tag">Python / Flask</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Claude API</span>
+              </div>
+              <div class="door-card__footer">
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">AI Health Application</span>
+                <a class="door-card__link" href="https://github.com/eagrawal519-del/Build-a-Solution-for-a-Sustainable-Development-Goal-SDG-" target="_blank" rel="noopener noreferrer">
+                  View Repository
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Network Monitoring & Email Alert System -->
+          <article class="door-card reveal-on-scroll">
+            <div class="door-card__portal-header">
+              <span class="door-card__coord">DIM_REF // 04</span>
+              <img src="assets/icons/anywhere-door.svg" alt="" class="door-card__door-icon" width="72" height="96" aria-hidden="true">
+            </div>
+            <div class="door-card__body">
+              <h3 class="door-card__title">Network Monitoring &amp; Alert Engine</h3>
+              <p class="door-card__desc">
+                Developed for industrial operations at Adani Power to automate server and workstation uptime verification. Configurable IP pinging loop detects status transitions (UP &harr; DOWN), writes timestamped event logs, and dispatches automated SMTP/TLS alert emails while intelligently suppressing redundant alerts during continuous outages.
+              </p>
+              <div class="door-card__tech-stack">
+                <span class="tech-tag tech-tag--highlight">Python</span>
+                <span class="tech-tag tech-tag--highlight">Subprocess</span>
+                <span class="tech-tag">SMTP / TLS</span>
+                <span class="tech-tag">Logging Architecture</span>
+              </div>
+              <div class="door-card__footer">
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">Adani Industrial IT</span>
+                <a class="door-card__link" href="assets/Ekta_Agrawal_Frontend_Developer_Resume.docx" download>
+                  View Details
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         05. EXTRA-CURRICULAR & LEADERSHIP: MEMORY BREAD ARCHIVE
+         ====================================================================== -->
+    <section class="section" id="archive">
+      <div class="container">
+        <div class="section-head reveal-on-scroll">
+          <p class="section-kicker">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+            05 // Anki-pan Knowledge Archive
+          </p>
+          <h2 class="section-title">
+            Memory Bread: <em>Leadership &amp; Community Impact</em>
+          </h2>
+          <p class="section-lede">
+            Knowledge stamped into memory — leadership, coordination, and giving back through community technology education.
+          </p>
+        </div>
+
+        <div class="archive-grid">
+          
+          <article class="memory-card reveal-on-scroll">
+            <div class="memory-card__icon-wrap">
+              <img src="assets/icons/memory-bread.svg" alt="" width="54" height="54" aria-hidden="true">
+            </div>
+            <div class="memory-card__content">
+              <span class="memory-card__badge">Hackathon Leadership // 2023</span>
+              <h3 class="memory-card__title">Smart India Hackathon (SIH) — Core Team Leader</h3>
+              <p class="memory-card__desc">
+                Served as Core Team Leader for the Smart India Hackathon 2023 campus contingent, managing operations, logistics, team schedules, and inter-team coordination to ensure seamless execution.
+              </p>
+            </div>
+          </article>
+
+          <article class="memory-card reveal-on-scroll">
+            <div class="memory-card__icon-wrap">
+              <img src="assets/icons/memory-bread.svg" alt="" width="54" height="54" aria-hidden="true">
+            </div>
+            <div class="memory-card__content">
+              <span class="memory-card__badge">Community Outreach // AICTE</span>
+              <h3 class="memory-card__title">AICTE Computer Literacy Mentor</h3>
+              <p class="memory-card__desc">
+                Volunteered to teach foundational computer literacy, digital navigation, and software basics to underprivileged students under an AICTE-assigned community outreach program.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         06. CONTACT: ANYWHERE DOOR DIMENSIONAL GATEWAY
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-gateway-card reveal-on-scroll">
+          <div class="contact-grid">
+            
+            <div class="contact-intro">
+              <p class="section-kicker" style="background: rgba(244, 63, 94, 0.15); border-color: rgba(244, 63, 94, 0.35); color: #FDA4AF;">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+                06 // Dimensional Gateway
+              </p>
+              <h2 class="section-title" style="margin-bottom: var(--space-4);">
+                Open the Anywhere Door: <em>Let's Connect</em>
+              </h2>
+              <p style="font-size: var(--text-base); color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-6);">
+                I am actively seeking an entry-level <strong>Frontend Developer</strong> position to build production-grade web applications. Whether you have an open opportunity, a collaborative idea, or wish to discuss my work, the gateway is open.
+              </p>
+              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                <a class="btn btn--primary" href="mailto:agrawalekta498@gmail.com">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Send Direct Transmission
+                </a>
+                <a class="btn" href="assets/Ekta_Agrawal_Frontend_Developer_Resume.docx" download>
+                  Download Resume
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Link Channels -->
+            <div class="contact-channels">
+              
+              <!-- Email -->
+              <div class="contact-link-tile">
+                <div class="contact-link-info">
+                  <div class="contact-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-title">Email Transmission</div>
+                    <a href="mailto:agrawalekta498@gmail.com" class="contact-link-val">agrawalekta498@gmail.com</a>
+                  </div>
+                </div>
+                <button class="contact-copy-btn" data-copy-email aria-label="Copy email address to clipboard">
+                  COPY
+                </button>
+              </div>
+
+              <!-- Phone -->
+              <a href="tel:+917722822202" class="contact-link-tile">
+                <div class="contact-link-info">
+                  <div class="contact-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-title">Direct Phone</div>
+                    <span class="contact-link-val">+91 7722822202</span>
+                  </div>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--blue-bright);">CALL &rarr;</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/ekta-agrawal-834b94314/" target="_blank" rel="noopener noreferrer" class="contact-link-tile">
+                <div class="contact-link-info">
+                  <div class="contact-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-title">LinkedIn Network</div>
+                    <span class="contact-link-val">linkedin.com/in/ekta-agrawal-834b94314</span>
+                  </div>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--blue-bright);">CONNECT &rarr;</span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/eagrawal519-del" target="_blank" rel="noopener noreferrer" class="contact-link-tile">
+                <div class="contact-link-info">
+                  <div class="contact-link-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-title">GitHub Repository</div>
+                    <span class="contact-link-val">github.com/eagrawal519-del</span>
+                  </div>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--blue-bright);">EXPLORE &rarr;</span>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Tactile Copy Notification Toast -->
+  <div class="copy-toast" id="copyToast" role="status" aria-live="polite">
+    COORDINATES COPIED TO CLIPBOARD
+  </div>
+
+  <!-- 22nd-Century Floating Audio Deck (Doraemon BGM) -->
+  <aside class="floating-audio-deck" id="floatingAudioDeck" aria-label="22nd-Century Music Player">
+    <div class="audio-deck-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+    </div>
+    <div class="audio-deck-track">
+      <span class="audio-deck-title">Doraemon no Uta (ドラえもんのうた)</span>
+      <span class="audio-deck-artist">22nd-Century Synth Bell BGM</span>
+    </div>
+    <button class="audio-deck-play-btn" id="audioDeckPlay" aria-label="Play Doraemon theme music">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    </button>
+  </aside>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p style="font-weight: 700; color: var(--text-pure); margin-bottom: 0.2rem;">
+          Ekta Agrawal — Frontend Developer &amp; Computer Science Undergraduate
+        </p>
+        <p style="font-size: var(--text-xs); color: var(--text-muted);">
+          Raigarh (C.G.), India &bull; <a href="mailto:agrawalekta498@gmail.com" style="color: var(--blue-bright);">agrawalekta498@gmail.com</a>
+        </p>
+      </div>
+      <div class="site-footer__telemetry">
+        <span>22ND-CENTURY DORAEMON CYBERNETIC ARCHITECTURE // 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

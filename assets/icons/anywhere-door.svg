@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <defs>
+    <linearGradient id="doorFrameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#9F1239"/>
+    </linearGradient>
+    <linearGradient id="portalSpace" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="40%" stop-color="#38BDF8"/>
+      <stop offset="80%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#0284C7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ground Plane / Shadow -->
+  <ellipse cx="60" cy="152" rx="48" ry="6" fill="#000" fill-opacity="0.4"/>
+
+  <!-- Portal Aura -->
+  <rect x="22" y="16" width="76" height="130" rx="6" fill="url(#portalGlow)"/>
+
+  <!-- Outer Door Frame -->
+  <rect x="18" y="10" width="84" height="142" rx="6" fill="url(#doorFrameGrad)" stroke="#FDA4AF" stroke-width="1.5"/>
+
+  <!-- Inner Portal Space (Visible Through Open/Ajar Door) -->
+  <rect x="26" y="18" width="68" height="126" rx="4" fill="url(#portalSpace)"/>
+
+  <!-- Sub-space Star Particles -->
+  <circle cx="45" cy="40" r="1.5" fill="#FFF" opacity="0.9"/>
+  <circle cx="70" cy="55" r="1" fill="#FFF" opacity="0.7"/>
+  <circle cx="38" cy="85" r="1.2" fill="#FFF" opacity="0.8"/>
+  <circle cx="65" cy="110" r="1.5" fill="#FFF" opacity="0.9"/>
+  <circle cx="50" cy="125" r="1" fill="#FFF" opacity="0.6"/>
+
+  <!-- Dimensional Door Leaf (Ajar Perspective) -->
+  <path d="M26 18 L76 28 L76 136 L26 144 Z" fill="#FB7185" stroke="#FFE4E6" stroke-width="1.2"/>
+  <path d="M76 28 L84 31 L84 133 L76 136 Z" fill="#BE123C"/>
+
+  <!-- Door Panels -->
+  <path d="M34 35 L68 41 L68 75 L34 72 Z" fill="#F43F5E" stroke="#FECDD3" stroke-width="1"/>
+  <path d="M34 82 L68 85 L68 126 L34 131 Z" fill="#F43F5E" stroke="#FECDD3" stroke-width="1"/>
+
+  <!-- Golden Doorknob -->
+  <circle cx="70" cy="85" r="3.5" fill="#F59E0B" stroke="#78350F" stroke-width="1"/>
+  <circle cx="69" cy="84" r="1" fill="#FEF08A"/>
+</svg>

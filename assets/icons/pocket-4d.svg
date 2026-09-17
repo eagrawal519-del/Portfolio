@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" fill="none">
+  <defs>
+    <linearGradient id="pocketBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <radialGradient id="portalEmitter" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#0284C7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Emitter Aura -->
+  <path d="M20 25 C20 75, 120 75, 120 25 Z" fill="url(#portalEmitter)"/>
+
+  <!-- Dimensional Stitches / Outline -->
+  <path d="M15 22 Q70 18 125 22" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 22 C18 78, 122 78, 122 22" stroke="#0284C7" stroke-width="1.8" stroke-dasharray="4 3"/>
+
+  <!-- Half-Moon Pocket Pouch -->
+  <path d="M20 24 C20 76, 120 76, 120 24 Z" fill="url(#pocketBody)" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <!-- Sub-Space Portal Rim -->
+  <ellipse cx="70" cy="24" rx="50" ry="8" fill="#0E172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <ellipse cx="70" cy="24" rx="42" ry="5" fill="#0284C7" opacity="0.6"/>
+
+  <!-- Emerging 4D Sparks / Dimensional Particles -->
+  <circle cx="55" cy="18" r="1.5" fill="#38BDF8"/>
+  <circle cx="78" cy="14" r="2" fill="#FBBF24"/>
+  <circle cx="90" cy="20" r="1.2" fill="#38BDF8"/>
+  <circle cx="42" cy="22" r="1.2" fill="#FBBF24"/>
+
+  <!-- Seam Detail -->
+  <path d="M30 32 C30 70, 110 70, 110 32" stroke="#CBD5E1" stroke-width="1" fill="none"/>
+</svg>

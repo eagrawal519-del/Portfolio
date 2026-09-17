@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="chronoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <radialGradient id="warpAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#0284C7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Warp Vortex Aura -->
+  <circle cx="60" cy="60" r="52" fill="url(#warpAura)"/>
+  <circle cx="60" cy="60" r="48" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+
+  <!-- Chrono-Ring Orbit Track -->
+  <ellipse cx="60" cy="60" rx="44" ry="22" stroke="#38BDF8" stroke-width="1.2" transform="rotate(-25 60 60)"/>
+  <ellipse cx="60" cy="60" rx="44" ry="22" stroke="#F59E0B" stroke-width="1.2" transform="rotate(25 60 60)"/>
+
+  <!-- Time Machine Console Base / Platform -->
+  <path d="M30 75 L90 75 L78 92 L42 92 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <line x1="38" y1="84" x2="82" y2="84" stroke="#0284C7" stroke-width="1"/>
+
+  <!-- Chrono Steering Column & Time Dial -->
+  <rect x="58" y="42" width="4" height="34" rx="2" fill="#94A3B8"/>
+  <circle cx="60" cy="42" r="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.8"/>
+  <circle cx="60" cy="42" r="11" fill="#0284C7" fill-opacity="0.3"/>
+
+  <!-- Clock Hands (Time Jump Markers) -->
+  <line x1="60" y1="42" x2="60" y2="34" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="60" y1="42" x2="67" y2="46" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="60" cy="42" r="2.5" fill="#FFF"/>
+
+  <!-- Temporal Lights -->
+  <circle cx="36" cy="78" r="2.5" fill="#10B981"/>
+  <circle cx="84" cy="78" r="2.5" fill="#EF4444"/>
+</svg>
